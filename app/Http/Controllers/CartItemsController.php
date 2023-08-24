@@ -38,7 +38,6 @@ class CartItemsController extends Controller
     }
     public function update(Request $request, $id)
     {
-        //原生SQL寫法
         $data = $request->all();
         $form = DB::table('cart_items')->where('id', $id)->get();
         if (empty($form)) {
