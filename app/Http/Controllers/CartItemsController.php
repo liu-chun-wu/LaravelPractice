@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Models\CartItems;
 use App\Models\Carts;
 
 
@@ -24,7 +23,6 @@ class CartItemsController extends Controller
         ]);
         */
         $cart = Carts::find($request['carts_id']);
-        //$result = 
         return response()->json(true);
     }
     public function read($id)
